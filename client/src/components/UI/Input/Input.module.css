@@ -1,0 +1,7 @@
+.addTaskInput, 
+.dateInput {
+background-color: transparent;
+border: solid 1px yellow;
+border-radius: 7px;
+height: 30px;
+}
