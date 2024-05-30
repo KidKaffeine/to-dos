@@ -4,6 +4,7 @@ import Label from "../components/UI/Label/Label";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPoo } from "@fortawesome/free-solid-svg-icons/faPoo";
 import Button from "../components/UI/Button/Button";
+import { Form } from "react-router-dom";
 
 
 export default function AddTask() {
@@ -12,7 +13,7 @@ export default function AddTask() {
 
   return (
     <>
-      <form className={styles.addTaskform}>
+      <Form method="post" action="/addTask" className={styles.addTaskForm}>
         <Label
           htmlFor="addTask"
           aria-label="add-task"
@@ -49,9 +50,9 @@ export default function AddTask() {
           max={"31-12-2030"}
           className={"dateInput"}
         />
-        <Button type="submit" className={"addTaskBtn"} title={"Submit your shit!"}/>
+        <Button type={"submit"} className={"addTaskBtn"} title={"Submit your shit!"}/>
         <FontAwesomeIcon icon={faPoo} color="yellow" size="2x" />
-      </form>
+      </Form>
     </>
   );
 }
