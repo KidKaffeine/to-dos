@@ -27,3 +27,29 @@ body {
 .errorSpan {
   margin-left: 15px;
 }
+
+.addTaskForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 20px;
+  width: 75%;
+  border: solid 1px yellow;
+  border-radius: 10px;
+}
+
+.addTaskForm > * {
+  margin-bottom: 7px;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 75%;
+}
+
+.taskCategory {
+  background-color: transparent;
+  border: solid 1px yellow;
+  border-radius: 7px;
+  height: 30px;
+}
