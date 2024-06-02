@@ -14,9 +14,23 @@ const Task = require('./db/Schema/schema')
 
 app.post("/addTask", async (req, res) => {
     try {
+        let important = req.body.important === "on" ? true : false
         await dbConnect()
-        const newTask = await Task.create(req.body)
+        const newTask = await Task.create({...req.body, important: important})
+        console.log(newTask)
         return res.status(201).json(newTask)
+    } catch (error) {
+        console.error(error)
+        throw new Error ("Something went wrong.")
+    }
+})
+
+
+app.get("/getTasks", async (req, res) => {
+    try {
+        await dbConnect()
+        const taskList = await Task.find()
+        return res.status(201).json(taskList)
     } catch (error) {
         console.error(error)
         throw new Error ("Something went wrong.")
