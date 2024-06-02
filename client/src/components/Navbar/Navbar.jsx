@@ -6,16 +6,18 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import List from "../UI/List/List";
+import ListItem from "../UI/ListIem/ListItem";
 
 export default function Navbar() {
   return (
     <>
       <nav className={styles.navBar}>
-        <ul className={styles.navList}>
-          <li key="starIcon">
+        <List className={"navList"}>
+          <ListItem key="starIcon">
             <FontAwesomeIcon icon={faStar} size="2x" />
-          </li>
-          <li key="addIcon">
+          </ListItem>
+          <ListItem key="addIcon">
             <Link to="/addTask">
               <FontAwesomeIcon
                 icon={faPlusCircle}
@@ -24,11 +26,11 @@ export default function Navbar() {
                 color="yellow"
               />
             </Link>
-          </li>
-          <li key="searchIcon">
+          </ListItem>
+          <ListItem key="searchIcon">
             <FontAwesomeIcon icon={faMagnifyingGlass} size="2x" />
-          </li>
-        </ul>
+          </ListItem>
+        </List>
       </nav>
     </>
   );

@@ -19,16 +19,17 @@ export default function AddTask() {
         />
         <Input
           type={"text"}
-          name={"addTask"}
+          name={"text"}
           id={"addTask"}
           className={"addTaskInput"}
+          required
         />
         <Label
           htmlFor="category"
           aria-label="category"
           title={"Category of the shit:"}
         />
-        <select name="category" className={styles.taskCategory}>
+        <select name="category" className={styles.taskCategory} required>
           <option value="">Category</option>
           <option value="home">Home</option>
           <option value="work">Work</option>
@@ -48,6 +49,12 @@ export default function AddTask() {
           max={"31-12-2030"}
           className={"dateInput"}
         />
+        <Label
+          htmlFor="important"
+          aria-label="important task?"
+          title={"Important shit?"}
+        />
+        <Input type={"checkbox"} name={"important"} id={"important"} />
         <Button
           type={"submit"}
           className={"addTaskBtn"}

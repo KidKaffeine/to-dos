@@ -4,16 +4,3 @@
     bottom: 0;
     width: 100%;
 }
-
-.navList {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 5px 5px;
-    list-style: none;
-    margin: 0;
-}
-
-.navList:hover > * {
-    cursor: pointer;
-}
