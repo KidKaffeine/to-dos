@@ -1,19 +1,17 @@
 import styles from "../styles/pages.module.css";
 import Input from "../components/UI/Input/Input";
 import Label from "../components/UI/Label/Label";
+import { Form } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPoo } from "@fortawesome/free-solid-svg-icons/faPoo";
 import Button from "../components/UI/Button/Button";
-import { Form } from "react-router-dom";
-
 
 export default function AddTask() {
-  
   let date = new Date().toLocaleDateString();
 
   return (
     <>
-      <Form method="post" action="/addTask" className={styles.addTaskForm}>
+      <Form method="post" className={styles.addTaskForm} action={"/addTask"}>
         <Label
           htmlFor="addTask"
           aria-label="add-task"
@@ -50,7 +48,11 @@ export default function AddTask() {
           max={"31-12-2030"}
           className={"dateInput"}
         />
-        <Button type={"submit"} className={"addTaskBtn"} title={"Submit your shit!"}/>
+        <Button
+          type={"submit"}
+          className={"addTaskBtn"}
+          title={"Submit your shit!"}
+        />
         <FontAwesomeIcon icon={faPoo} color="yellow" size="2x" />
       </Form>
     </>
