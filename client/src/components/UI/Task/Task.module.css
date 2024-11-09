@@ -1,0 +1,25 @@
+.taskItem {
+    list-style: none;
+    border: solid 1px yellow;
+    margin: 7px;
+    width: 75%;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+h3,
+p {
+    display: inline;
+}
+
+.test {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+@media only screen and (min-width: 992px) {
+    .taskItem {
+      width: 40%;
+    }
+  }

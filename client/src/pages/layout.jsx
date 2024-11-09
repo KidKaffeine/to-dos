@@ -7,9 +7,7 @@ function Layout() {
   return (
     <div>
       <Header title={"shit to do"} />
-      <Container className={"mainContainer"}>
         <Outlet />
-      </Container>
       <Navbar />
     </div>
   );

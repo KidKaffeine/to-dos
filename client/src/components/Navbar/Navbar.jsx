@@ -20,7 +20,6 @@ export default function Navbar() {
               <FontAwesomeIcon
                 icon={faPlusCircle}
                 size="2x"
-                beatFade
                 color="yellow"
               />
             </Link>

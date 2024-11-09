@@ -19,11 +19,21 @@ app.post("/addTask", async (req, res) => {
         return res.status(201).json(newTask)
     } catch (error) {
         console.error(error)
-        throw new Error ("Something went wrong.")
+        throw new Error("Something went wrong adding the task.")
     }
 })
+
+app.get('/getTasks', async (req, res) => {
+    try {
+        await dbConnect()
+        const tasks = await Task.find({})
+        res.status(201).json(tasks)
+    } catch (error) {
+        console.error(error)
+        throw new Error("Something went wrong getting the tasks.")
+    }
+});
 
 app.listen(port, async () => {
     console.log(`Listening on port ${port}!`)
 })
-
