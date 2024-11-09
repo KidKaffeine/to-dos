@@ -10,9 +10,7 @@ export const handleAddTask = async ({ request }) => {
       },
       body: JSON.stringify(data),
     });
-
-  const task = await response.json();
-  console.log("task", task)
+    await response.json();
   } catch (error) {
     console.log(error)
     throw new Error ("Something went wrong.")
@@ -21,3 +19,14 @@ export const handleAddTask = async ({ request }) => {
 return redirect("/")
 };
 
+export const handleGetTasks = async () => {
+  try {
+    const response = await fetch("http://localhost:5000/getTasks")
+    const tasks = await response.json()
+    return tasks
+  } catch (error) {
+    console.log(error)
+    throw new Error ("Something went wrongggg.")
+  }
+}
+ 
