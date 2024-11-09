@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPoo } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Dashboard.module.css";
 import Container from "../UI/Container/Container";
+import Task from "../UI/Task/Task";
 
 export default function Dashboard() {
   const tasks = useLoaderData()
@@ -19,14 +20,9 @@ export default function Dashboard() {
   if (tasks.length) {
     dashboard = <>
       <Container className={"dashboardContainer"} >
-        <h1 className={styles.dashboardHeader}>Tasks</h1>
-        <ul>
+        <ul className={styles.dashboardList}>
           {tasks.map((task) => {
-            return <li key={task._id}>
-              <p>
-                {task.task}
-              </p>
-            </li>
+            return <Task tasks={task} key={task._id} />
           })}
         </ul>
       </Container>

@@ -2,8 +2,6 @@ import styles from "../styles/pages.module.css";
 import Input from "../components/UI/Input/Input";
 import Label from "../components/UI/Label/Label";
 import { Form } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPoo } from "@fortawesome/free-solid-svg-icons/faPoo";
 import Button from "../components/UI/Button/Button";
 import Container from "../components/UI/Container/Container";
 
@@ -50,9 +48,7 @@ export default function AddTask() {
             max={"31-12-2030"}
             className={"dateInput"}
           />
-          <Button title={"Test"} type={"submit"} />
-
-          <FontAwesomeIcon icon={faPoo} color="yellow" size="2x" />
+          <Button title={"Submit"} type={"submit"} className={"addTaskBtn"}/>
         </Form>
       </Container>
     </>
