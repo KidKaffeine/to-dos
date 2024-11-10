@@ -7,17 +7,20 @@
     border-radius: 7px;
 }
 
-h3,
-p {
+.taskHeader,
+.taskParagraph {
     display: inline;
 }
 
-.test {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10px;
+.taskParagraph  {
+  font-size: 12px;;
 }
+
+.taskHeader {
+  color: yellow;
+}
+
+
 @media only screen and (min-width: 992px) {
     .taskItem {
       width: 40%;

@@ -5,3 +5,11 @@ border: solid 1px yellow;
 border-radius: 7px;
 height: 30px;
 }
+
+.addTaskInput[type="text"], 
+.dateInput[type="date"],
+select {
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

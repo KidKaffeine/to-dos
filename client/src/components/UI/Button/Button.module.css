@@ -4,3 +4,12 @@
     margin-top: 20px;
     color: yellow;
 }
+
+.deleteBtn,
+.editBtn {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    float: right;
+    color: yellow;
+}

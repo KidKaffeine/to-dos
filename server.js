@@ -29,10 +29,9 @@ app.get('/getTasks', async (req, res) => {
         const tasks = await Task.find({})
         res.status(201).json(tasks)
     } catch (error) {
-        console.error(error)
-        throw new Error("Something went wrong getting the tasks.")
     }
 });
+
 
 app.listen(port, async () => {
     console.log(`Listening on port ${port}!`)

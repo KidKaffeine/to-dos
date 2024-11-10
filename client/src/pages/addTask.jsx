@@ -11,7 +11,7 @@ export default function AddTask() {
   return (
     <>
       <Container className={"formContainer"}>
-        <Form method="post" className={styles.addTaskForm} action={"/addTask"}>
+        <Form method="post" className={styles.addTaskForm} action={"/addTask"} type="submit">
           <Label
             htmlFor="addTask"
             aria-label="add-task"
@@ -48,7 +48,7 @@ export default function AddTask() {
             max={"31-12-2030"}
             className={"dateInput"}
           />
-          <Button title={"Submit"} type={"submit"} className={"addTaskBtn"}/>
+          <Button title={"Submit"} className={"addTaskBtn"}/>
         </Form>
       </Container>
     </>
